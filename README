@@ -1,0 +1,13 @@
+Table of Contents:
+1. Brief Overview
+2. How to run the program
+
+1. Brief Overview:
+This program is designed to determine whether the letter above a given torpedo hole is a W or an N. It uses opencv's SIFT algorithm to calculate descriptors of the target image as well as test images (e.g. an isolated W or N). 
+It then compares the descriptors of the target image's letter to the descriptors of the test letters, and finds a match using a KNN approach- the top k candidates are looked at, and whichever (W or N) has more matches is determined to be the letter of the target.
+
+2. How to run the program.
+a) Load in an array, named test_corners, from the test_corners.txt file supplied (just copy-paste). (Test image test.jpg corresponds to the first array, test2.jpg to the second)
+b) Load in your test image (test.jpg) with cv2.imread("full/file/path")
+c) Send the rectangle corners and the image you loaded in to the function mapCharsToRects.
+d) Sit back and watch the magic happen! Results are displayed in the same order inputted (top-left, top-right, bottom-left, bottom-right)
